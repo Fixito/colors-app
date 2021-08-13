@@ -2,10 +2,16 @@ import React, { Component } from "react";
 import "./App.css";
 import Palette from "./Palette";
 import seedColors from "./seedColors";
+import { generatePalette } from "./colorHelpers";
 
 class App extends Component {
   render() {
-    return <Palette {...seedColors[4]} />;
+    console.log(generatePalette(seedColors[4]));
+    return (
+      <div>
+        <Palette {...seedColors[4]} />
+      </div>
+    );
   }
 }
 
